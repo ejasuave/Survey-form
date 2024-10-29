@@ -22,20 +22,19 @@ body{
 
 .container{
   width: 100%;
-  max-width: 720px;
-  margin: 7em auto 0 auto;
+  max-width: 100%;
+  margin: 5rem auto 0 auto;
   padding: 1rem;
   border:  none;
   justify-content: center;
 }
 
 form{
-    min-width: 480px;
-    width: 100%;
-    padding: 2rem;
+    max-width: 100%;
+    padding: 1rem;
     border: none;
     border-radius: 1.5rem;
-    background: rgba(0, 0, 255, 0.466);
+    background: rgba(0, 0, 255, 0.407);
     color: rgb(0, 0, 0);
     font-size: 20px;
 }
@@ -60,7 +59,7 @@ header{
 display: block;
 text-align: center;
 margin-bottom: 2.5rem;
-color: rgba(0, 0, 0, 0.800);
+color: rgb(0, 0, 0);
 font-size: larger;
 font-style: italic;
 font-weight: 600;
@@ -147,12 +146,31 @@ input[type="checkbox"] {
     margin: 5px;
 }
 
-@media (max-width: 600px) {
+
+
+
+@media (max-width: 414px) {
     .container {
-        padding: 1rem; /* Adjust padding for smaller screens */
-        width: 100%; /* Make sure it takes full width */
+        padding: 1rem; /* Reduced padding for smaller screens */
+        max-width: 100%; /* Full width on small screens */
     }
 }
+
+
+@media (min-width: 401px), (max-width: 414px) {
+    .container {
+        padding: 2rem; /* Slightly more padding */
+        max-width: 100%; /* Reduce max-width to fit better */
+    }
+}
+
+@media (min-width: 721px) {
+    .container {
+        padding: 2.5rem; /* Standard padding */
+        max-width: 720px; /* Set a maximum width */
+    }
+}
+
 
 .submit{
     display: block;
@@ -168,4 +186,3 @@ input[type="checkbox"] {
 select{
     cursor: pointer;
 }
-
