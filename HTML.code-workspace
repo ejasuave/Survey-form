@@ -1,0 +1,14 @@
+{
+    "folders": [
+        {
+            "path": ".vscode"
+        }
+    ],
+    "settings": {
+        "liveServer.settings.fullReload": true,
+        "files.autoSaveDelay": 500,
+        "files.autoSave": "afterDelay",
+        "liveServer.settings.ChromeDebuggingAttachment": false,
+        "liveServer.settings.AdvanceCustomBrowserCmdLine": ""
+    }
+}
