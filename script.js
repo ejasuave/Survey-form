@@ -31,3 +31,30 @@ document.getElementById("survey-form").addEventListener("submit", function(event
         alert('There was a network error.');
     });
 });
+
+document.getElementById('other').addEventListener('change', function() {
+    const textarea = document.getElementById('other-preference');
+    // Toggle display based on checkbox status
+    textarea.style.display = this.checked ? 'block' : 'none';
+});
+
+document.getElementById('other').addEventListener('change', function() {
+    const textarea = document.getElementById('other-preference');
+    textarea.style.display = this.checked ? 'block' : 'none';
+    if (!this.checked) {
+        textarea.value = ''; // Clear textarea if "Other" is unchecked
+    }
+});
+
+document.getElementById('survey-form').addEventListener('submit', function(event) {
+    const otherCheckbox = document.getElementById('other');
+    const otherPreference = document.getElementById('other-preference').value;
+    const combinedPreference = document.getElementById('combined-preference');
+
+    if (otherCheckbox.checked && otherPreference) {
+        combinedPreference.value = otherPreference;
+    } else {
+        combinedPreference.value = ""; // Clear if "Other" is unchecked or empty
+    }
+});
+
